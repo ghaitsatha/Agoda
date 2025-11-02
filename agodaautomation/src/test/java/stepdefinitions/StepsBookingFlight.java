@@ -34,6 +34,7 @@ public class StepsBookingFlight {
     public void search_flight(String from, String to) {
         homePage = new HomePage(driver);
         homePage.goToFlightPage();
+        try { Thread.sleep(2000); } catch (Exception e) {}
         homePage.enterCities(from, to);
         homePage.selectTomorrowDate();
         homePage.clickSearch();
